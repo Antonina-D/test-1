@@ -1,0 +1,78 @@
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  background: $lightGray;
+  color: $dark;
+  font-size: 100%;
+  font-family: $fontTitle;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 15px;
+  @media screen and (max-width: 480px) {
+    padding: 0;
+    display: block;
+    background: $white;
+  }
+}
+.grid-row {
+  display: flex;
+  margin: 0 -7.7px;
+  &_wrap {
+    flex-wrap: wrap;
+  }
+  &_between {
+    justify-content: space-between;
+  }
+  &_middle {
+    align-items: center;
+  }
+  &_small {
+    margin: 0 -5px;
+    .grid-col {
+      padding: 0 5px;
+    }
+  }
+  &_large {
+    margin: 0 -10px;
+    .grid-col {
+      padding: 0 10px;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    &_desktop {
+      display: block;
+      > .grid-col {
+        width: 100%;
+        min-width: 100%;
+      }
+    }
+  }
+}
+.grid-col {
+  padding: 0 7.7px;
+  &_50 {
+    width: 50%;
+    min-width: 50%;
+  }
+  &_full {
+    flex: 1;
+    min-width: 0;
+  }
+}
+.hidden {
+  display: none;
+}
+.svg-icon {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  color: inherit;
+}

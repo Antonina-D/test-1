@@ -1,0 +1,20 @@
+.link {
+  display: inline-block;
+  position: relative;
+  color: $blue;
+  &::after {
+    content: '';
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: $blue;
+    transition: $transition;
+    position: absolute;
+  }
+  &:hover {
+    &::after {
+      opacity: 0;
+    }
+  }
+}
